@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>楽天モバイル従業員紹介キャンペーン | お得に始める携帯電話</title>
+    <meta name="description" content="楽天モバイルの従業員紹介キャンペーンで特典をゲット！月額980円から始められる携帯電話サービス。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            background: #fff;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #BF0000 0%, #E60012 100%);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #BF0000;
+            padding: 18px 36px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #333;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+        }
+        
+        .benefit-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #BF0000;
+        }
+        
+        .benefit-desc {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* Flow Section */
+        .flow {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .flow-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .flow-step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #BF0000;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+        }
+        
+        .step-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .step-desc {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #333;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+        
+        .faq-arrow {
+            font-size: 1.2rem;
+            color: #BF0000;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-arrow {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 30px 25px;
+        }
+        
+        .faq-answer p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        
+        .social-share {
+            margin-bottom: 40px;
+        }
+        
+        .social-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: #BF0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-btn:hover {
+            background: #E60012;
+            transform: translateY(-2px);
+        }
+        
+        .social-icon {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .copyright {
+            font-size: 0.8rem;
+            color: #999;
+            border-top: 1px solid #555;
+            padding-top: 20px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .flow-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .social-btn {
+                width: 200px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>楽天モバイルで<br>お得に始めよう</h1>
+            <p>従業員紹介キャンペーンで特典をゲット！<br>月額980円から使える携帯電話サービス</p>
+            <a href="https://r10.to/h5s7Gw" class="cta-button">今すぐ申し込む</a>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">選ばれる4つの理由</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="30" fill="#BF0000" opacity="0.1"/>
+                            <path d="M32 12C38.627 12 44 17.373 44 24V28H46C47.105 28 48 28.895 48 30V50C48 51.105 47.105 52 46 52H18C16.895 52 16 51.105 16 50V30C16 28.895 16.895 28 18 28H20V24C20 17.373 25.373 12 32 12Z" fill="#BF0000"/>
+                            <path d="M32 36C33.105 36 34 36.895 34 38V42C34 43.105 33.105 44 32 44C30.895 44 30 43.105 30 42V38C30 36.895 30.895 36 32 36Z" fill="white"/>
+                            <path d="M24 24V28H40V24C40 19.582 36.418 16 32 16C27.582 16 24 19.582 24 24Z" fill="white" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">サブ回線OK・オンライン完結</h3>
+                    <p class="benefit-desc">メイン回線はそのままで、サブ回線として楽天モバイルを追加可能。オンラインで簡単手続き</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="30" fill="#BF0000" opacity="0.1"/>
+                            <path d="M32 8C18.745 8 8 18.745 8 32C8 45.255 18.745 56 32 56C45.255 56 56 45.255 56 32C56 18.745 45.255 8 32 8Z" fill="#BF0000"/>
+                            <path d="M32 16C27.582 16 24 19.582 24 24V40C24 44.418 27.582 48 32 48C36.418 48 40 44.418 40 40V24C40 19.582 36.418 16 32 16Z" fill="white"/>
+                            <path d="M28 28V36H36V28H28Z" fill="#BF0000"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">最短5分で開通</h3>
+                    <p class="benefit-desc">eKYCによる本人確認で、最短5分で開通完了。eSIM対応でSIMカード配送を待つ必要なし</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="30" fill="#BF0000" opacity="0.1"/>
+                            <path d="M16 20C16 18.895 16.895 18 18 18H46C47.105 18 48 18.895 48 20V44C48 45.105 47.105 46 46 46H18C16.895 46 16 45.105 16 44V20Z" fill="#BF0000"/>
+                            <path d="M20 22V42H44V22H20Z" fill="white"/>
+                            <path d="M24 26H40V30H24V26Z" fill="#BF0000"/>
+                            <path d="M24 34H32V38H24V34Z" fill="#BF0000"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">月額980円〜</h3>
+                    <p class="benefit-desc">3GB以下なら月額980円の低価格。データ使用量が多い月は段階的に料金が上がる安心設計</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="30" fill="#BF0000" opacity="0.1"/>
+                            <path d="M32 8L36.944 22.056L52 27L36.944 31.944L32 46L27.056 31.944L12 27L27.056 22.056L32 8Z" fill="#BF0000"/>
+                            <path d="M32 16L34.472 24.528L43 27L34.472 29.472L32 38L29.528 29.472L21 27L29.528 24.528L32 16Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">申込者・紹介者どちらも特典</h3>
+                    <p class="benefit-desc">従業員紹介キャンペーンで、申込者と紹介者の両方がお得な特典を受けられます</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flow Section -->
+    <section class="flow">
+        <div class="container">
+            <h2 class="section-title">カンタン3ステップ</h2>
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="30" fill="#BF0000" opacity="0.1"/>
+                            <path d="M20 16C18.895 16 18 16.895 18 18V46C18 47.105 18.895 48 20 48H44C45.105 48 46 47.105 46 46V18C46 16.895 45.105 16 44 16H20Z" fill="#BF0000"/>
+                            <path d="M22 20V44H42V20H22Z" fill="white"/>
+                            <path d="M26 24H38V28H26V24Z" fill="#BF0000"/>
+                            <path d="M26 32H38V36H26V32Z" fill="#BF0000"/>
+                            <path d="M26 40H34V44H26V40Z" fill="#BF0000"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">プラン選択</h3>
+                    <p class="step-desc">お客様のご利用状況に合わせて最適なプランを選択してください</p>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="30" fill="#BF0000" opacity="0.1"/>
+                            <path d="M18 18C16.895 18 16 18.895 16 20V44C16 45.105 16.895 46 18 46H46C47.105 46 48 45.105 48 44V20C48 18.895 47.105 18 46 18H18Z" fill="#BF0000"/>
+                            <path d="M32 8C28.686 8 26 10.686 26 14V18H38V14C38 10.686 35.314 8 32 8Z" fill="white"/>
+                            <path d="M32 28C33.657 28 35 29.343 35 31C35 32.657 33.657 34 32 34C30.343 34 29 32.657 29 31C29 29.343 30.343 28 32 28Z" fill="white"/>
+                            <path d="M32 36C33.105 36 34 36.895 34 38V40C34 41.105 33.105 42 32 42C30.895 42 30 41.105 30 40V38C30 36.895 30.895 36 32 36Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">eKYC本人確認</h3>
+                    <p class="step-desc">スマートフォンで本人確認書類を撮影して、オンラインで本人確認を完了</p>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="30" fill="#BF0000" opacity="0.1"/>
+                            <path d="M32 8C18.745 8 8 18.745 8 32C8 45.255 18.745 56 32 56C45.255 56 56 45.255 56 32C56 18.745 45.255 8 32 8Z" fill="#BF0000"/>
+                            <path d="M28 32L30 34L36 28" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">開通完了</h3>
+                    <p class="step-desc">開通手続きが完了したら、すぐに楽天モバイルをご利用いただけます</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">よくある質問</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>月額料金はいくらですか？</span>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>楽天モバイルの料金プランは使った分だけ支払う段階制です。3GB以下なら月額980円、20GB以下なら1,980円、20GB以上なら2,980円でデータ使い放題です。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>物理SIMとeSIMどちらが選べますか？</span>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>物理SIMとeSIMの両方をお選びいただけます。eSIMなら最短5分で開通できるため、すぐにご利用開始いただけます。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>eSIMに対応している端末はありますか？</span>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>iPhone XS以降、Google Pixel 4以降、その他多くのAndroid端末でeSIMをご利用いただけます。詳細は楽天モバイル公式サイトでご確認ください。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>支払い方法は何がありますか？</span>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>クレジットカード、デビットカード、口座振替、楽天ポイントでのお支払いが可能です。楽天カードなら楽天ポイントが貯まってさらにお得です。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>解約手数料はかかりますか？</span>
+                        <span class="faq-arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>解約手数料は一切かかりません。契約期間の縛りもないため、いつでも無料で解約できます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-share">
+                <h3 class="social-title">この情報をシェア</h3>
+                <div class="social-buttons">
+                    <a href="https://twitter.com/intent/tweet?text=楽天モバイル従業員紹介キャンペーン&url=https://r10.to/h5s7Gw" class="social-btn" target="_blank" rel="noopener">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        X (Twitter)
+                    </a>
+                    <a href="https://www.instagram.com/" class="social-btn" target="_blank" rel="noopener">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        Instagram
+                    </a>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 Rakuten Group, Inc. employee（非公式）
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+                
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
