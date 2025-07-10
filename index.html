@@ -374,23 +374,23 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
+                line-height: 1.3;
             }
             
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             
             .section-title {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                line-height: 1.3;
             }
             
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-            
+            .benefits-grid,
             .flow-steps {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
             
             .social-buttons {
@@ -402,6 +402,153 @@
                 width: 200px;
                 justify-content: center;
             }
+            
+            /* Mobile-specific styles for new sections */
+            .comparison table {
+                font-size: 0.9rem;
+            }
+            
+            .comparison th,
+            .comparison td {
+                padding: 10px 8px !important;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            .use-cases-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            /* Summary section mobile */
+            .summary h2 {
+                font-size: 1.8rem !important;
+            }
+            
+            .summary [style*="grid-template-columns"] {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            .summary [style*="padding: 30px"] {
+                padding: 20px !important;
+            }
+            
+            /* Final CTA mobile */
+            .final-cta h2 {
+                font-size: 1.8rem !important;
+            }
+            
+            .final-cta [style*="padding: 40px"] {
+                padding: 25px !important;
+            }
+            
+            /* Campaign details mobile */
+            .campaign-details [style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            /* Savings calculator mobile */
+            .savings [style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            .savings [style*="grid-template-columns: 1fr 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 15px !important;
+            }
+            
+            /* CTA button mobile optimization */
+            .cta-button {
+                font-size: 1rem !important;
+                padding: 15px 25px !important;
+                white-space: normal;
+                line-height: 1.4;
+            }
+            
+            /* Hero section mobile */
+            .hero [style*="padding: 20px"] {
+                padding: 15px !important;
+            }
+            
+            /* Table responsive */
+            .comparison-table {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            /* Text sizing for mobile */
+            .hero h1 {
+                font-size: 1.8rem !important;
+            }
+            
+            .hero p {
+                font-size: 0.95rem !important;
+            }
+            
+            /* Card padding adjustments */
+            .benefit-card,
+            .testimonial-card,
+            .use-case-card {
+                padding: 25px 20px !important;
+            }
+            
+            /* Emoji sizing for mobile */
+            .hero h1::after {
+                right: -25px !important;
+                font-size: 1.2rem !important;
+            }
+        }
+        
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero h1 {
+                font-size: 1.6rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.6rem !important;
+            }
+            
+            .cta-button {
+                width: 90%;
+                margin: 10px auto;
+                display: block;
+                text-align: center;
+                font-size: 0.95rem !important;
+                padding: 12px 20px !important;
+            }
+            
+            /* Stack comparison table vertically on very small screens */
+            .comparison th:not(:first-child),
+            .comparison td:not(:first-child) {
+                display: none;
+            }
+            
+            .comparison th:first-child,
+            .comparison td:first-child {
+                width: 100%;
+            }
+            
+            /* Testimonial cards mobile */
+            .testimonial-card [style*="display: flex"] {
+                flex-direction: column !important;
+                text-align: center !important;
+            }
+            
+            .testimonial-card [style*="margin-right: 15px"] {
+                margin-right: 0 !important;
+                margin-bottom: 10px !important;
+            }
         }
     </style>
 </head>
@@ -409,12 +556,101 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>楽天モバイルで<br>お得に始めよう</h1>
+            <h1>✨ 楽天モバイルで<br>年間最大36,000円節約！ ✨</h1>
             <p>🎁 従業員紹介キャンペーンで特典をゲット！<br>💝 月額980円から使える携帯電話サービス</p>
-            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 15px; margin: 20px 0; display: inline-block;">
-                <p style="font-size: 1.1rem; font-weight: 600; margin: 0;">🔥 今だけ限定！お得なキャンペーン実施中 🔥</p>
+            <div style="background: rgba(255, 255, 255, 0.25); padding: 20px; border-radius: 20px; margin: 25px 0; display: inline-block; border: 2px solid rgba(255, 255, 255, 0.3);">
+                <p style="font-size: 1.2rem; font-weight: 700; margin: 0; text-shadow: 0 1px 2px rgba(0,0,0,0.1);">🔥 期間限定！従業員紹介特典実施中 🔥</p>
+                <p style="font-size: 0.95rem; margin: 8px 0 0 0; opacity: 0.9;">申込者・紹介者両方にお得な特典プレゼント</p>
             </div>
-            <a href="https://r10.to/h5s7Gw" class="cta-button">💖 今すぐエントリー 💖</a>
+            <div style="margin: 30px 0;">
+                <a href="https://r10.to/h5s7Gw" class="cta-button" style="margin: 10px;">💖 今すぐエントリー 💖</a>
+                <div style="margin-top: 15px;">
+                    <p style="font-size: 0.9rem; opacity: 0.8; margin: 0;">⏰ 最短5分で開通 | 📱 eSIM対応 | 🔒 契約期間縛りなし</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section (Interest) -->
+    <section class="comparison" style="padding: 80px 0; background: linear-gradient(135deg, #fff 0%, #ffeef0 100%);">
+        <div class="container">
+            <h2 class="section-title">📊 他社との比較 📊</h2>
+            <div class="comparison-table" style="max-width: 800px; margin: 0 auto; overflow-x: auto;">
+                <table style="width: 100%; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 30px rgba(255, 107, 138, 0.15); border-collapse: collapse;">
+                    <thead>
+                        <tr style="background: linear-gradient(135deg, #ff6b8a 0%, #ff8fab 100%); color: white;">
+                            <th style="padding: 20px; text-align: center; font-weight: 700;">項目</th>
+                            <th style="padding: 20px; text-align: center; font-weight: 700; background: linear-gradient(135deg, #ffb3c6 0%, #ffc4d6 100%); color: #333;">💖 楽天モバイル</th>
+                            <th style="padding: 20px; text-align: center; font-weight: 700;">A社</th>
+                            <th style="padding: 20px; text-align: center; font-weight: 700;">B社</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; text-align: center; font-weight: 600;">月額料金<br><small>(3GB)</small></td>
+                            <td style="padding: 20px; text-align: center; background: rgba(255, 179, 198, 0.1); font-weight: 700; color: #ff6b8a;">✨ 980円</td>
+                            <td style="padding: 20px; text-align: center;">2,178円</td>
+                            <td style="padding: 20px; text-align: center;">1,628円</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; text-align: center; font-weight: 600;">契約期間</td>
+                            <td style="padding: 20px; text-align: center; background: rgba(255, 179, 198, 0.1); font-weight: 700; color: #ff6b8a;">🔓 縛りなし</td>
+                            <td style="padding: 20px; text-align: center;">2年縛り</td>
+                            <td style="padding: 20px; text-align: center;">2年縛り</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; text-align: center; font-weight: 600;">開通スピード</td>
+                            <td style="padding: 20px; text-align: center; background: rgba(255, 179, 198, 0.1); font-weight: 700; color: #ff6b8a;">⚡ 最短5分</td>
+                            <td style="padding: 20px; text-align: center;">3-7日</td>
+                            <td style="padding: 20px; text-align: center;">1-3日</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 20px; text-align: center; font-weight: 600;">年間節約額</td>
+                            <td style="padding: 20px; text-align: center; background: rgba(255, 179, 198, 0.1); font-weight: 700; color: #ff6b8a;">💰 最大36,000円</td>
+                            <td style="padding: 20px; text-align: center;">-</td>
+                            <td style="padding: 20px; text-align: center;">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://r10.to/h5s7Gw" class="cta-button">💖 お得にエントリー 💖</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section (Interest) -->
+    <section class="use-cases" style="padding: 80px 0; background: #fff;">
+        <div class="container">
+            <h2 class="section-title">🌟 こんな方におすすめ 🌟</h2>
+            <div class="use-cases-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 60px;">
+                <div class="use-case-card" style="background: linear-gradient(135deg, #fff 0%, #ffeef0 100%); padding: 40px 30px; border-radius: 25px; text-align: center; box-shadow: 0 8px 30px rgba(255, 107, 138, 0.15); border: 1px solid rgba(255, 179, 198, 0.3);">
+                    <div style="width: 80px; height: 80px; margin: 0 auto 20px; background: linear-gradient(135deg, #ff6b8a 0%, #ff8fab 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👨‍💼</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 15px; color: #ff6b8a;">ビジネスマン</h3>
+                    <p style="color: #666; line-height: 1.7;">メイン回線を変えずにサブ回線として楽天モバイルを追加。出張先でも安心してデータ通信を利用できます。</p>
+                    <div style="margin-top: 20px; padding: 15px; background: rgba(255, 107, 138, 0.1); border-radius: 15px;">
+                        <p style="font-weight: 600; color: #ff6b8a; margin: 0;">💰 月額980円でデータ通信安心</p>
+                    </div>
+                </div>
+                
+                <div class="use-case-card" style="background: linear-gradient(135deg, #fff 0%, #ffeef0 100%); padding: 40px 30px; border-radius: 25px; text-align: center; box-shadow: 0 8px 30px rgba(255, 107, 138, 0.15); border: 1px solid rgba(255, 179, 198, 0.3);">
+                    <div style="width: 80px; height: 80px; margin: 0 auto 20px; background: linear-gradient(135deg, #ff6b8a 0%, #ff8fab 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👩‍🎓</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 15px; color: #ff6b8a;">学生・主婦</h3>
+                    <p style="color: #666; line-height: 1.7;">スマホ代を節約したい方に最適。家計を圧迫せずに快適な通信環境を手に入れられます。</p>
+                    <div style="margin-top: 20px; padding: 15px; background: rgba(255, 107, 138, 0.1); border-radius: 15px;">
+                        <p style="font-weight: 600; color: #ff6b8a; margin: 0;">💰 年間最大36,000円節約</p>
+                    </div>
+                </div>
+                
+                <div class="use-case-card" style="background: linear-gradient(135deg, #fff 0%, #ffeef0 100%); padding: 40px 30px; border-radius: 25px; text-align: center; box-shadow: 0 8px 30px rgba(255, 107, 138, 0.15); border: 1px solid rgba(255, 179, 198, 0.3);">
+                    <div style="width: 80px; height: 80px; margin: 0 auto 20px; background: linear-gradient(135deg, #ff6b8a 0%, #ff8fab 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👥</div>
+                    <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 15px; color: #ff6b8a;">家族での利用</h3>
+                    <p style="color: #666; line-height: 1.7;">家族みんなで楽天モバイルに乗り換えれば、月々の通信費を大幅に削減できます。</p>
+                    <div style="margin-top: 20px; padding: 15px; background: rgba(255, 107, 138, 0.1); border-radius: 15px;">
+                        <p style="font-weight: 600; color: #ff6b8a; margin: 0;">💰 家族4人で年間14万円以上節約</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -478,6 +714,140 @@
         </div>
     </section>
 
+    <!-- Testimonials Section (Desire) -->
+    <section class="testimonials" style="padding: 80px 0; background: linear-gradient(135deg, #ffeef0 0%, #fff5f6 100%);">
+        <div class="container">
+            <h2 class="section-title">💝 お客様の声 💝</h2>
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 60px;">
+                <div class="testimonial-card" style="background: white; padding: 30px; border-radius: 25px; box-shadow: 0 8px 30px rgba(255, 107, 138, 0.15); position: relative;">
+                    <div style="position: absolute; top: -10px; right: 20px; font-size: 3rem; color: #ff6b8a; opacity: 0.3;">"</div>
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #ff6b8a 0%, #ff8fab 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 1.5rem;">👨</div>
+                        <div>
+                            <h4 style="margin: 0; color: #ff6b8a; font-weight: 600;">田中さん（30代・会社員）</h4>
+                            <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #999;">★★★★★</p>
+                        </div>
+                    </div>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">従業員紹介で楽天モバイルに乗り換えました。月額3,000円だったスマホ代が980円になり、年間で24,000円以上節約できています。eSIMで5分で開通したのも驚きでした！</p>
+                    <div style="padding: 15px; background: rgba(255, 107, 138, 0.1); border-radius: 15px; text-align: center;">
+                        <p style="font-weight: 600; color: #ff6b8a; margin: 0;">💰 年間24,240円節約</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="background: white; padding: 30px; border-radius: 25px; box-shadow: 0 8px 30px rgba(255, 107, 138, 0.15); position: relative;">
+                    <div style="position: absolute; top: -10px; right: 20px; font-size: 3rem; color: #ff6b8a; opacity: 0.3;">"</div>
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #ff6b8a 0%, #ff8fab 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 1.5rem;">👩</div>
+                        <div>
+                            <h4 style="margin: 0; color: #ff6b8a; font-weight: 600;">佐藤さん（20代・学生）</h4>
+                            <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #999;">★★★★★</p>
+                        </div>
+                    </div>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">学生でお金がないので、安いプランを探していました。楽天モバイルなら3GB以下で980円、しかも契約期間の縛りもなくて安心です。親にも勧めました！</p>
+                    <div style="padding: 15px; background: rgba(255, 107, 138, 0.1); border-radius: 15px; text-align: center;">
+                        <p style="font-weight: 600; color: #ff6b8a; margin: 0;">💰 月額980円で通信費抑制</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="background: white; padding: 30px; border-radius: 25px; box-shadow: 0 8px 30px rgba(255, 107, 138, 0.15); position: relative;">
+                    <div style="position: absolute; top: -10px; right: 20px; font-size: 3rem; color: #ff6b8a; opacity: 0.3;">"</div>
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #ff6b8a 0%, #ff8fab 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 1.5rem;">👨‍👩‍👧‍👦</div>
+                        <div>
+                            <h4 style="margin: 0; color: #ff6b8a; font-weight: 600;">鈴木さん（40代・主婦）</h4>
+                            <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #999;">★★★★★</p>
+                        </div>
+                    </div>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">家族4人でスマホ代が月15,000円かかっていました。楽天モバイルに家族で乗り換えたら月6,000円になり、年間で10万円以上節約できています！</p>
+                    <div style="padding: 15px; background: rgba(255, 107, 138, 0.1); border-radius: 15px; text-align: center;">
+                        <p style="font-weight: 600; color: #ff6b8a; margin: 0;">💰 家族で年間108,000円節約</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Savings Calculator Section (Desire) -->
+    <section class="savings" style="padding: 80px 0; background: white;">
+        <div class="container">
+            <h2 class="section-title">💰 あなたの節約効果をシミュレーション 💰</h2>
+            <div style="max-width: 600px; margin: 0 auto; background: linear-gradient(135deg, #fff 0%, #ffeef0 100%); padding: 40px; border-radius: 25px; box-shadow: 0 8px 30px rgba(255, 107, 138, 0.15);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                    <div style="text-align: center; padding: 20px; background: rgba(255, 107, 138, 0.1); border-radius: 20px;">
+                        <h3 style="color: #ff6b8a; margin-bottom: 10px;">現在のスマホ代</h3>
+                        <p style="font-size: 2rem; font-weight: 700; color: #333; margin: 0;">3,000円</p>
+                        <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0 0;">月額平均</p>
+                    </div>
+                    <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #ff6b8a 0%, #ff8fab 100%); border-radius: 20px; color: white;">
+                        <h3 style="margin-bottom: 10px;">楽天モバイル</h3>
+                        <p style="font-size: 2rem; font-weight: 700; margin: 0;">980円</p>
+                        <p style="font-size: 0.9rem; opacity: 0.9; margin: 5px 0 0 0;">3GB以下</p>
+                    </div>
+                </div>
+                <div style="text-align: center; padding: 25px; background: linear-gradient(135deg, #ffb3c6 0%, #ffc4d6 100%); border-radius: 20px; margin-bottom: 30px;">
+                    <h3 style="color: #333; margin-bottom: 15px;">💖 あなたの節約効果 💖</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; text-align: center;">
+                        <div>
+                            <p style="font-size: 1.8rem; font-weight: 700; color: #ff6b8a; margin: 0;">2,020円</p>
+                            <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0 0;">月間節約</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 1.8rem; font-weight: 700; color: #ff6b8a; margin: 0;">24,240円</p>
+                            <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0 0;">年間節約</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 1.8rem; font-weight: 700; color: #ff6b8a; margin: 0;">48,480円</p>
+                            <p style="font-size: 0.9rem; color: #666; margin: 5px 0 0 0;">2年間節約</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <a href="https://r10.to/h5s7Gw" class="cta-button">💖 今すぐ節約を始める 💖</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaign Details Section (Desire) -->
+    <section class="campaign-details" style="padding: 80px 0; background: linear-gradient(135deg, #ffeef0 0%, #fff5f6 100%);">
+        <div class="container">
+            <h2 class="section-title">🎁 従業員紹介キャンペーン詳細 🎁</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 40px; border-radius: 25px; box-shadow: 0 8px 30px rgba(255, 107, 138, 0.15); margin-bottom: 30px;">
+                    <h3 style="color: #ff6b8a; text-align: center; margin-bottom: 30px; font-size: 1.5rem;">✨ 特典内容 ✨</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                        <div style="text-align: center; padding: 25px; background: rgba(255, 107, 138, 0.1); border-radius: 20px;">
+                            <div style="font-size: 3rem; margin-bottom: 15px;">👤</div>
+                            <h4 style="color: #ff6b8a; margin-bottom: 15px;">申込者様</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="margin-bottom: 10px; color: #666;">🎁 楽天ポイント6,000pt</li>
+                                <li style="margin-bottom: 10px; color: #666;">📱 事務手数料無料</li>
+                                <li style="margin-bottom: 10px; color: #666;">📞 サポート優先対応</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: center; padding: 25px; background: rgba(255, 107, 138, 0.1); border-radius: 20px;">
+                            <div style="font-size: 3rem; margin-bottom: 15px;">👥</div>
+                            <h4 style="color: #ff6b8a; margin-bottom: 15px;">紹介者様</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="margin-bottom: 10px; color: #666;">🎁 楽天ポイント7,000pt</li>
+                                <li style="margin-bottom: 10px; color: #666;">💰 特別謝礼金</li>
+                                <li style="margin-bottom: 10px; color: #666;">🏆 紹介実績として評価</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: linear-gradient(135deg, #ff6b8a 0%, #ff8fab 100%); color: white; padding: 30px; border-radius: 25px; text-align: center;">
+                    <h3 style="margin-bottom: 20px; font-size: 1.3rem;">🔥 期間限定！今だけの特別特典 🔥</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 25px; opacity: 0.95;">この従業員紹介リンクからお申し込みの方限定で、通常特典に加えて追加ボーナスをプレゼント！</p>
+                    <div style="background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 15px; margin-bottom: 25px;">
+                        <p style="font-size: 1.3rem; font-weight: 700; margin: 0;">💎 追加特典：楽天ポイント3,000pt 💎</p>
+                    </div>
+                    <a href="https://r10.to/h5s7Gw" class="cta-button" style="background: white; color: #ff6b8a;">💖 限定特典をGET 💖</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Flow Section -->
     <section class="flow">
         <div class="container">
@@ -526,6 +896,91 @@
                     <h3 class="step-title">開通完了</h3>
                     <p class="step-desc">開通手続きが完了したら、すぐに楽天モバイルをご利用いただけます</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Section (Memory) -->
+    <section class="summary" style="padding: 80px 0; background: linear-gradient(135deg, #ff6b8a 0%, #ff8fab 100%); color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.4rem; font-weight: 700; margin-bottom: 60px; color: white;">✨ 楽天モバイルまとめ ✨</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 50px;">
+                    <div style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.15); border-radius: 20px; backdrop-filter: blur(10px);">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px;">💰 圧倒的な安さ</h3>
+                        <p style="font-size: 1.1rem; opacity: 0.9; margin: 0;">月額980円から使える<br>年間最大36,000円節約</p>
+                    </div>
+                    <div style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.15); border-radius: 20px; backdrop-filter: blur(10px);">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px;">⚡ 最速開通</h3>
+                        <p style="font-size: 1.1rem; opacity: 0.9; margin: 0;">eSIMで最短5分<br>すぐに使える安心感</p>
+                    </div>
+                    <div style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.15); border-radius: 20px; backdrop-filter: blur(10px);">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px;">🔓 縛りなし</h3>
+                        <p style="font-size: 1.1rem; opacity: 0.9; margin: 0;">契約期間の縛りなし<br>いつでも自由に変更可能</p>
+                    </div>
+                    <div style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.15); border-radius: 20px; backdrop-filter: blur(10px);">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px;">🎁 特別特典</h3>
+                        <p style="font-size: 1.1rem; opacity: 0.9; margin: 0;">従業員紹介限定<br>楽天ポイント最大16,000pt</p>
+                    </div>
+                </div>
+                <div style="text-align: center; background: rgba(255, 255, 255, 0.2); padding: 30px; border-radius: 25px; margin-bottom: 40px;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 20px;">🔥 今すぐ行動すべき3つの理由 🔥</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+                        <div>
+                            <div style="font-size: 2.5rem; margin-bottom: 10px;">⏰</div>
+                            <p style="font-weight: 600; margin: 0;">期間限定キャンペーン</p>
+                        </div>
+                        <div>
+                            <div style="font-size: 2.5rem; margin-bottom: 10px;">💰</div>
+                            <p style="font-weight: 600; margin: 0;">毎月2,000円以上節約</p>
+                        </div>
+                        <div>
+                            <div style="font-size: 2.5rem; margin-bottom: 10px;">📱</div>
+                            <p style="font-weight: 600; margin: 0;">5分で開通完了</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <a href="https://r10.to/h5s7Gw" style="display: inline-block; background: white; color: #ff6b8a; padding: 25px 50px; font-size: 1.3rem; font-weight: 700; text-decoration: none; border-radius: 50px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; border: 3px solid rgba(255, 255, 255, 0.8);">💖 今すぐ特典をGET 💖</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section (Action) -->
+    <section class="final-cta" style="padding: 80px 0; background: white;">
+        <div class="container">
+            <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 30px; color: #ff6b8a;">💝 最後にお伝えしたいこと 💝</h2>
+                <div style="background: linear-gradient(135deg, #fff 0%, #ffeef0 100%); padding: 40px; border-radius: 25px; box-shadow: 0 8px 30px rgba(255, 107, 138, 0.15); margin-bottom: 40px;">
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 25px;">
+                        このページをご覧いただいている今、あなたは年間36,000円の節約チャンスを手にしています。<br>
+                        <br>
+                        多くの方が「あとで申し込もう」と思いながら、結局機会を逃してしまいます。<br>
+                        しかし、楽天モバイルなら契約期間の縛りもなく、リスクゼロで始められます。
+                    </p>
+                    <div style="background: rgba(255, 107, 138, 0.1); padding: 25px; border-radius: 20px; margin-bottom: 25px;">
+                        <h3 style="color: #ff6b8a; margin-bottom: 15px; font-size: 1.3rem;">✨ あなたが今すぐ行動すると ✨</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                            <li style="margin-bottom: 10px; color: #666;">✅ 月額980円で通信費を大幅削減</li>
+                            <li style="margin-bottom: 10px; color: #666;">✅ 最短5分で開通、今日から利用開始</li>
+                            <li style="margin-bottom: 10px; color: #666;">✅ 従業員紹介限定特典を全てGET</li>
+                            <li style="margin-bottom: 10px; color: #666;">✅ 年間24,000円以上の節約を実現</li>
+                            <li style="color: #666;">✅ いつでも無料で解約可能で安心</li>
+                        </ul>
+                    </div>
+                    <p style="font-size: 1.0rem; color: #999; margin: 0;">
+                        ※ 申込み手続きは約5分で完了します<br>
+                        ※ 特典は予告なく終了する場合があります
+                    </p>
+                </div>
+                <div style="margin-bottom: 30px;">
+                    <a href="https://r10.to/h5s7Gw" class="cta-button" style="font-size: 1.4rem; padding: 25px 60px;">🌟 今すぐエントリーして節約開始 🌟</a>
+                </div>
+                <p style="font-size: 0.9rem; color: #999; margin: 0;">
+                    📞 ご不明な点がございましたら、お気軽にお問い合わせください<br>
+                    🕐 24時間いつでもオンラインでお申し込み可能
+                </p>
             </div>
         </div>
     </section>
