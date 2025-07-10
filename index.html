@@ -300,18 +300,41 @@
         
         /* Responsive */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .hero {
+                padding: 60px 0 40px;
+            }
+            
             .hero h1 {
-                font-size: 2rem;
-                line-height: 1.3;
+                font-size: 1.8rem;
+                line-height: 1.4;
+                margin-bottom: 16px;
             }
             
             .hero p {
                 font-size: 1rem;
+                line-height: 1.5;
+            }
+            
+            .hero [style*="padding: 20px"] {
+                padding: 16px !important;
+                margin: 20px 0 !important;
             }
             
             .section-title {
-                font-size: 1.8rem;
-                line-height: 1.3;
+                font-size: 1.6rem;
+                line-height: 1.4;
+                margin-bottom: 40px;
+            }
+            
+            /* Section padding adjustments */
+            .benefits,
+            .flow,
+            .faq {
+                padding: 60px 0 !important;
             }
             
             .benefits-grid,
@@ -331,23 +354,55 @@
             }
             
             /* Mobile-specific styles for new sections */
+            .comparison {
+                padding: 60px 0 !important;
+            }
+            
+            .comparison-table {
+                margin: 0 -16px;
+                border-radius: 0;
+            }
+            
             .comparison table {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
+                min-width: 100%;
             }
             
             .comparison th,
             .comparison td {
-                padding: 10px 8px !important;
+                padding: 12px 8px !important;
+                white-space: nowrap;
+            }
+            
+            .comparison th:first-child,
+            .comparison td:first-child {
+                position: sticky;
+                left: 0;
+                background: white;
+                z-index: 1;
+                box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+            }
+            
+            .testimonials {
+                padding: 60px 0 !important;
             }
             
             .testimonials-grid {
                 grid-template-columns: 1fr !important;
-                gap: 20px !important;
+                gap: 24px !important;
+            }
+            
+            .use-cases {
+                padding: 60px 0 !important;
             }
             
             .use-cases-grid {
                 grid-template-columns: 1fr !important;
-                gap: 20px !important;
+                gap: 24px !important;
+            }
+            
+            .use-case-card {
+                padding: 24px 20px !important;
             }
             
             /* Summary section mobile */
@@ -392,10 +447,18 @@
             
             /* CTA button mobile optimization */
             .cta-button {
-                font-size: 1rem !important;
-                padding: 15px 25px !important;
+                font-size: 1.1rem !important;
+                padding: 18px 32px !important;
+                min-height: 52px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
                 white-space: normal;
                 line-height: 1.4;
+                margin: 16px 0;
+                border-radius: 12px !important;
+                text-align: center;
+                min-width: 200px;
             }
             
             /* Hero section mobile */
@@ -409,20 +472,42 @@
                 -webkit-overflow-scrolling: touch;
             }
             
-            /* Text sizing for mobile */
-            .hero h1 {
-                font-size: 1.8rem !important;
+            /* Mobile text optimization */
+            .benefit-title {
+                font-size: 1.2rem !important;
             }
             
-            .hero p {
+            .benefit-desc {
                 font-size: 0.95rem !important;
+                line-height: 1.6 !important;
+            }
+            
+            .step-title {
+                font-size: 1.2rem !important;
+            }
+            
+            .step-desc {
+                font-size: 0.9rem !important;
+                line-height: 1.6 !important;
             }
             
             /* Card padding adjustments */
-            .benefit-card,
-            .testimonial-card,
-            .use-case-card {
-                padding: 25px 20px !important;
+            .benefit-card {
+                padding: 24px 20px !important;
+                margin-bottom: 20px;
+            }
+            
+            .testimonial-card {
+                padding: 24px 20px !important;
+            }
+            
+            .flow-step {
+                margin-bottom: 32px;
+            }
+            
+            .step-icon {
+                width: 60px !important;
+                height: 60px !important;
             }
             
             /* Emoji sizing for mobile */
@@ -435,46 +520,96 @@
         /* Extra small devices */
         @media (max-width: 480px) {
             .container {
-                padding: 0 15px;
+                padding: 0 12px;
+            }
+            
+            .hero {
+                padding: 50px 0 30px;
             }
             
             .hero h1 {
-                font-size: 1.6rem !important;
+                font-size: 1.5rem !important;
+                margin-bottom: 12px;
+            }
+            
+            .hero p {
+                font-size: 0.9rem !important;
             }
             
             .section-title {
-                font-size: 1.6rem !important;
+                font-size: 1.4rem !important;
+                margin-bottom: 32px;
+            }
+            
+            .benefits,
+            .comparison,
+            .use-cases,
+            .testimonials,
+            .flow,
+            .faq {
+                padding: 40px 0 !important;
             }
             
             .cta-button {
-                width: 90%;
-                margin: 10px auto;
-                display: block;
-                text-align: center;
-                font-size: 0.95rem !important;
-                padding: 12px 20px !important;
-            }
-            
-            /* Stack comparison table vertically on very small screens */
-            .comparison th:not(:first-child),
-            .comparison td:not(:first-child) {
-                display: none;
-            }
-            
-            .comparison th:first-child,
-            .comparison td:first-child {
                 width: 100%;
+                margin: 20px 0;
+                font-size: 1.05rem !important;
+                padding: 20px 24px !important;
+                min-height: 56px;
+                border-radius: 14px !important;
+                line-height: 1.4;
+            }
+            
+            /* Mobile-first comparison table */
+            .comparison-table {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .comparison table {
+                font-size: 0.8rem;
+            }
+            
+            .comparison th,
+            .comparison td {
+                padding: 8px 6px !important;
+                min-width: 80px;
+            }
+            
+            /* Benefit cards */
+            .benefit-card {
+                padding: 20px 16px !important;
             }
             
             /* Testimonial cards mobile */
+            .testimonial-card {
+                padding: 20px 16px !important;
+            }
+            
             .testimonial-card [style*="display: flex"] {
                 flex-direction: column !important;
                 text-align: center !important;
+                align-items: center !important;
             }
             
             .testimonial-card [style*="margin-right: 15px"] {
                 margin-right: 0 !important;
-                margin-bottom: 10px !important;
+                margin-bottom: 12px !important;
+            }
+            
+            /* Use case cards */
+            .use-case-card {
+                padding: 20px 16px !important;
+            }
+            
+            /* FAQ items */
+            .faq-question {
+                padding: 20px 16px !important;
+                font-size: 1rem !important;
+            }
+            
+            .faq-answer {
+                padding: 0 16px 20px !important;
             }
         }
     </style>
@@ -483,8 +618,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>楽天モバイルで<br>年間最大36,000円節約</h1>
-            <p>従業員紹介キャンペーンで特典をゲット！<br>月額980円から使える携帯電話サービス</p>
+            <h1>楽天モバイル<br>従業員紹介キャンペーン</h1>
+            <p>楽天最強プランで通信費を大幅節約<br>月額968円（税込）から使える携帯電話サービス</p>
             <div style="background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 8px; margin: 25px 0; display: inline-block; border: 1px solid rgba(255, 255, 255, 0.3);">
                 <p style="font-size: 1.1rem; font-weight: 600; margin: 0;">期間限定！従業員紹介特典実施中</p>
                 <p style="font-size: 0.95rem; margin: 8px 0 0 0; opacity: 0.9;">申込者・紹介者両方にお得な特典プレゼント</p>
@@ -515,7 +650,7 @@
                     <tbody>
                         <tr style="border-bottom: 1px solid #f0f0f0;">
                             <td style="padding: 20px; text-align: center; font-weight: 600;">月額料金<br><small>(3GB)</small></td>
-                            <td style="padding: 20px; text-align: center; background: #e8f4f8; font-weight: 700; color: #2E86AB;">980円</td>
+                            <td style="padding: 20px; text-align: center; background: #e8f4f8; font-weight: 700; color: #2E86AB;">968円（税込）</td>
                             <td style="padding: 20px; text-align: center;">2,178円</td>
                             <td style="padding: 20px; text-align: center;">1,628円</td>
                         </tr>
@@ -622,8 +757,8 @@
                             <path d="M24 34H32V38H24V34Z" fill="#BF0000"/>
                         </svg>
                     </div>
-                    <h3 class="benefit-title">月額980円〜</h3>
-                    <p class="benefit-desc">3GB以下なら月額980円の低価格。データ使用量が多い月は段階的に料金が上がる安心設計</p>
+                    <h3 class="benefit-title">月額968円（税込）〜</h3>
+                    <p class="benefit-desc">3GB以下なら月額968円（税込）の低価格。データ使用量が多い月は段階的に料金が上がる安心設計</p>
                 </div>
                 
                 <div class="benefit-card">
@@ -655,7 +790,7 @@
                             <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #999;">★★★★★</p>
                         </div>
                     </div>
-                    <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">従業員紹介で楽天モバイルに乗り換えました。月額3,000円だったスマホ代が980円になり、年間で24,000円以上節約できています。eSIMで5分で開通したのも驚きでした！</p>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">従業員紹介で楽天モバイルに乗り換えました。月額3,000円だったスマホ代が968円になり、年間で24,000円以上節約できています。eSIMで最短即日開通したのも驚きでした！</p>
                     <div style="padding: 15px; background: rgba(255, 107, 138, 0.1); border-radius: 15px; text-align: center;">
                         <p style="font-weight: 600; color: #ff6b8a; margin: 0;">💰 年間24,240円節約</p>
                     </div>
@@ -670,9 +805,9 @@
                             <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #999;">★★★★★</p>
                         </div>
                     </div>
-                    <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">学生でお金がないので、安いプランを探していました。楽天モバイルなら3GB以下で980円、しかも契約期間の縛りもなくて安心です。親にも勧めました！</p>
+                    <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">学生でお金がないので、安いプランを探していました。楽天モバイルなら3GB以下で968円（税込）、しかも契約期間の縛りもなくて安心です。親にも勧めました！</p>
                     <div style="padding: 15px; background: rgba(255, 107, 138, 0.1); border-radius: 15px; text-align: center;">
-                        <p style="font-weight: 600; color: #ff6b8a; margin: 0;">💰 月額980円で通信費抑制</p>
+                        <p style="font-weight: 600; color: #ff6b8a; margin: 0;">💰 月額968円（税込）で通信費抑制</p>
                     </div>
                 </div>
                 
@@ -707,7 +842,7 @@
                     </div>
                     <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #ff6b8a 0%, #ff8fab 100%); border-radius: 20px; color: white;">
                         <h3 style="margin-bottom: 10px;">楽天モバイル</h3>
-                        <p style="font-size: 2rem; font-weight: 700; margin: 0;">980円</p>
+                        <p style="font-size: 2rem; font-weight: 700; margin: 0;">968円</p>
                         <p style="font-size: 0.9rem; opacity: 0.9; margin: 5px 0 0 0;">3GB以下</p>
                     </div>
                 </div>
@@ -835,7 +970,7 @@
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 50px;">
                     <div style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.15); border-radius: 20px; backdrop-filter: blur(10px);">
                         <h3 style="font-size: 1.5rem; margin-bottom: 15px;">💰 圧倒的な安さ</h3>
-                        <p style="font-size: 1.1rem; opacity: 0.9; margin: 0;">月額980円から使える<br>年間最大36,000円節約</p>
+                        <p style="font-size: 1.1rem; opacity: 0.9; margin: 0;">月額968円（税込）から使える<br>年間最大36,000円節約</p>
                     </div>
                     <div style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.15); border-radius: 20px; backdrop-filter: blur(10px);">
                         <h3 style="font-size: 1.5rem; margin-bottom: 15px;">⚡ 最速開通</h3>
@@ -889,7 +1024,7 @@
                     <div style="background: rgba(255, 107, 138, 0.1); padding: 25px; border-radius: 20px; margin-bottom: 25px;">
                         <h3 style="color: #ff6b8a; margin-bottom: 15px; font-size: 1.3rem;">✨ あなたが今すぐ行動すると ✨</h3>
                         <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
-                            <li style="margin-bottom: 10px; color: #666;">✅ 月額980円で通信費を大幅削減</li>
+                            <li style="margin-bottom: 10px; color: #666;">✅ 月額968円（税込）で通信費を大幅削減</li>
                             <li style="margin-bottom: 10px; color: #666;">✅ 最短5分で開通、今日から利用開始</li>
                             <li style="margin-bottom: 10px; color: #666;">✅ 従業員紹介限定特典を全てGET</li>
                             <li style="margin-bottom: 10px; color: #666;">✅ 年間24,000円以上の節約を実現</li>
